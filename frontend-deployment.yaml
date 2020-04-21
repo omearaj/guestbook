@@ -16,6 +16,8 @@ spec:
         app: guestbook
         tier: frontend
     spec:
+      securityContext:
+        runAsUser: 1000
       containers:
       - name: php-redis
         image: gcr.io/google-samples/gb-frontend:v4
